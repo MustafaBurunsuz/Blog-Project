@@ -6,23 +6,16 @@ using System.Web.Mvc;
 
 namespace MvcBlog.Controllers
 {
-    public class AboutController : Controller
+    public class CommentController : Controller
     {
-        // GET: About
-        public ActionResult Index()
+        // GET: Comment
+        public PartialViewResult CommentList()
         {
-            return View();
-        }
-        public PartialViewResult Footer()
-        {
-
             return PartialView();
         }
-        public PartialViewResult MeetTheTeam()
+        public PartialViewResult LeaveComment()
         {
-
             return PartialView();
-
         }
     }
 }

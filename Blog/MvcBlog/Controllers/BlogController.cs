@@ -43,5 +43,11 @@ namespace MvcBlog.Controllers
 
             return PartialView();
         }
+        public PartialViewResult BlogReadAll()
+        {
+
+            return PartialView();
+        }
+ 
     }
 }
