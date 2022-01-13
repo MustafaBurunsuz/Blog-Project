@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -41,9 +42,15 @@ namespace DataAccessLayer.Concrete
             return _object.ToList();
         }
 
+        public List<T> List(Expression<Func<T, bool>> Filter)
+        {
+            return _object.Where(Filter).ToList();
+        }
+
         public int Update(T p)
         {
             return c.SaveChanges();
         }
+        
     }
 }

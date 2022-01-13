@@ -1,4 +1,7 @@
-﻿using System;
+﻿using BusinessLayer.Concete;
+using PagedList;
+using PagedList.Mvc;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -9,26 +12,58 @@ namespace MvcBlog.Controllers
     public class BlogController : Controller
     {
         // GET: Blogs
+        BlogManager bm = new BlogManager();
         public ActionResult Index()
         {
             return View();
         }
-        public PartialViewResult BlogList()
-        {
+        public PartialViewResult BlogList(int page = 1)
+        { 
 
-            return PartialView();
+            var bloglist = bm.GetAll().ToPagedList(page,6);
+
+            return PartialView(bloglist);
         }
         public PartialViewResult FeaturedPost()
         {
-
+            //1.Post
+            var posttitle1 = bm.GetAll().OrderByDescending(z=>z.BlogID).Where(x => x.CategoryID == 2).Select(y => y.BlogTitle).FirstOrDefault();
+            var postimage1 = bm.GetAll().OrderByDescending(z=>z.BlogID).Where(x => x.CategoryID == 2).Select(y => y.BlogImage).FirstOrDefault();
+            var postdate1 = bm.GetAll().OrderByDescending(z=>z.BlogID).Where(x => x.CategoryID == 2).Select(y => y.BlogDate).FirstOrDefault();
+            ViewBag.posttitle1 = posttitle1;
+            ViewBag.postimage1 = postimage1;
+            ViewBag.postdate1 = postdate1 ;
+            //2.Post
+            var posttitle2 = bm.GetAll().OrderByDescending(z => z.BlogID).Where(x => x.CategoryID == 2).Select(y => y.BlogTitle).FirstOrDefault();
+            var postimage2 = bm.GetAll().OrderByDescending(z => z.BlogID).Where(x => x.CategoryID == 2).Select(y => y.BlogImage).FirstOrDefault();
+            var postdate2 = bm.GetAll().OrderByDescending(z => z.BlogID).Where(x => x.CategoryID == 2).Select(y => y.BlogDate).FirstOrDefault();
+            ViewBag.posttitle2 = posttitle2;
+            ViewBag.postimage2 = postimage2;
+            ViewBag.postdate2 = postdate2;
+            //3.Post
+            var posttitle3 = bm.GetAll().OrderByDescending(z => z.BlogID).Where(x => x.CategoryID == 3).Select(y => y.BlogTitle).FirstOrDefault();
+            var postimage3 = bm.GetAll().OrderByDescending(z => z.BlogID).Where(x => x.CategoryID == 3).Select(y => y.BlogImage).FirstOrDefault();
+            var postdate3 = bm.GetAll().OrderByDescending(z => z.BlogID).Where(x => x.CategoryID == 3).Select(y => y.BlogDate).FirstOrDefault();
+            ViewBag.posttitle3 = posttitle3;
+            ViewBag.postimage3 = postimage3;
+            ViewBag.postdate3 = postdate3;
+            //4.Post
+            var posttitle4 = bm.GetAll().OrderByDescending(z => z.BlogID).Where(x => x.CategoryID == 4).Select(y => y.BlogTitle).FirstOrDefault();
+            var postimage4 = bm.GetAll().OrderByDescending(z => z.BlogID).Where(x => x.CategoryID == 4).Select(y => y.BlogImage).FirstOrDefault();
+            var postdate4 = bm.GetAll().OrderByDescending(z => z.BlogID).Where(x => x.CategoryID == 4).Select(y => y.BlogDate).FirstOrDefault();
+            ViewBag.posttitle4 = posttitle4;
+            ViewBag.postimage4 = postimage4;
+            ViewBag.postdate4 = postdate4;
+            //5.Post
+            var posttitle5 = bm.GetAll().OrderByDescending(z => z.BlogID).Where(x => x.CategoryID == 5).Select(y => y.BlogTitle).FirstOrDefault();
+            var postimage5 = bm.GetAll().OrderByDescending(z => z.BlogID).Where(x => x.CategoryID == 5).Select(y => y.BlogImage).FirstOrDefault();
+            var postdate5 = bm.GetAll().OrderByDescending(z => z.BlogID).Where(x => x.CategoryID == 5).Select(y => y.BlogDate).FirstOrDefault();
+            ViewBag.posttitle5 = posttitle5;
+            ViewBag.postimage5 = postimage5;
+            ViewBag.postdate5 = postdate5;
             return PartialView();
         }
         public PartialViewResult OtherFeaturedPosts()
-        {
-
-            return PartialView();
-        }
-        public PartialViewResult MailSubscribe()
         {
 
             return PartialView();
@@ -38,15 +73,21 @@ namespace MvcBlog.Controllers
 
             return View();
         }
-        public PartialViewResult BlogCover()
+        public PartialViewResult BlogCover(int id)
         {
 
-            return PartialView();
+            var BlokDeailsList = bm.GetBlogByID(id);
+            return PartialView(BlokDeailsList);
         }
-        public PartialViewResult BlogReadAll()
+        public PartialViewResult BlogReadAll(int id)
+        {
+            var BlokDeailsList = bm.GetBlogByID(id);
+            return PartialView(BlokDeailsList);
+        }
+        public ActionResult BlogByCategory()
         {
 
-            return PartialView();
+            return View();
         }
  
     }

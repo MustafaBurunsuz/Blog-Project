@@ -41,7 +41,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Concete\AboutManager.cs" />
+    <Compile Include="Concete\BlogManager.cs" />
     <Compile Include="Concete\CategoryManager.cs" />
+    <Compile Include="Concete\CommentManager.cs" />
+    <Compile Include="Concete\SubscribeMailManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

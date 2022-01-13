@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BusinessLayer.Concete;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -8,10 +9,13 @@ namespace MvcBlog.Controllers
 {
     public class CommentController : Controller
     {
+        CommentManager cm = new CommentManager();
         // GET: Comment
-        public PartialViewResult CommentList()
-        {
-            return PartialView();
+        public PartialViewResult CommentList(int id)
+        {   
+            var commentlist = cm.CommentByBlock(id);
+            ViewBag.CommentCount = commentlist.Count();
+            return PartialView(commentlist);
         }
         public PartialViewResult LeaveComment()
         {
