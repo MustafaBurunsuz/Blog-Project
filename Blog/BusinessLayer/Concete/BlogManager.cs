@@ -20,5 +20,13 @@ namespace BusinessLayer.Concete
         {
             return repoblog.List(x => x.BlogID == id);
         }
+        public List<Blog> GetBogByAuthor(int id)
+        {
+            return repoblog.List(x => x.AuthorID == id);
+        }
+        public List<Blog> GetBlogByCategory(int id)
+        {
+            return repoblog.List(x => x.CategoryID == id);
+        }
     }
 }

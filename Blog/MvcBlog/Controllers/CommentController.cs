@@ -1,4 +1,5 @@
 ﻿using BusinessLayer.Concete;
+using EntityLayer.Concrete;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,8 +18,16 @@ namespace MvcBlog.Controllers
             ViewBag.CommentCount = commentlist.Count();
             return PartialView(commentlist);
         }
-        public PartialViewResult LeaveComment()
+        [HttpGet]
+        public PartialViewResult LeaveComment(int id)
         {
+            ViewBag.id = id;
+            return PartialView();
+        }
+        [HttpPost]
+        public PartialViewResult LeaveComment(Comment c)
+        {
+            cm.CommentAdd(c);
             return PartialView();
         }
     }

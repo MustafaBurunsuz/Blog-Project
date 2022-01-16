@@ -27,9 +27,9 @@ namespace MvcBlog.Controllers
         public PartialViewResult FeaturedPost()
         {
             //1.Post
-            var posttitle1 = bm.GetAll().OrderByDescending(z=>z.BlogID).Where(x => x.CategoryID == 2).Select(y => y.BlogTitle).FirstOrDefault();
-            var postimage1 = bm.GetAll().OrderByDescending(z=>z.BlogID).Where(x => x.CategoryID == 2).Select(y => y.BlogImage).FirstOrDefault();
-            var postdate1 = bm.GetAll().OrderByDescending(z=>z.BlogID).Where(x => x.CategoryID == 2).Select(y => y.BlogDate).FirstOrDefault();
+            var posttitle1 = bm.GetAll().OrderByDescending(z=>z.BlogID).Where(x => x.CategoryID == 1).Select(y => y.BlogTitle).FirstOrDefault();
+            var postimage1 = bm.GetAll().OrderByDescending(z=>z.BlogID).Where(x => x.CategoryID == 1).Select(y => y.BlogImage).FirstOrDefault();
+            var postdate1 = bm.GetAll().OrderByDescending(z=>z.BlogID).Where(x => x.CategoryID == 1).Select(y => y.BlogDate).FirstOrDefault();
             ViewBag.posttitle1 = posttitle1;
             ViewBag.postimage1 = postimage1;
             ViewBag.postdate1 = postdate1 ;
@@ -78,16 +78,21 @@ namespace MvcBlog.Controllers
 
             var BlokDeailsList = bm.GetBlogByID(id);
             return PartialView(BlokDeailsList);
+            
         }
         public PartialViewResult BlogReadAll(int id)
         {
             var BlokDeailsList = bm.GetBlogByID(id);
             return PartialView(BlokDeailsList);
         }
-        public ActionResult BlogByCategory()
+        public ActionResult BlogByCategory(int id)
         {
-
-            return View();
+            var BlogListByCategory = bm.GetBlogByCategory(id);
+            var CategoryName = bm.GetBlogByCategory(id).Select(y => y.Category.CategoryName).FirstOrDefault();
+            ViewBag.CategoryName = CategoryName;
+            var CategoryDetails = bm.GetBlogByCategory(id).Select(y => y.Category.CategoryDescription).FirstOrDefault();
+            ViewBag.CategoryDetails = CategoryDetails;
+            return View(BlogListByCategory);
         }
  
     }

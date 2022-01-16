@@ -12,7 +12,7 @@
                 </div>
                 <div class="comment-body">
                     <h3>@item.UserName</h3>
-                    <div class=>@(((DateTime)item.CommentDate).ToString("dd-MMM-yyyy"))</div>
+                    <div> @(((DateTime)item.CommentDate).ToString("dd-MMM-yyyy") )</div>
                     <p>@item.CommentText</p>
 
                 </div>
@@ -21,4 +21,4 @@
     </ul>
     @Html.Action("LeaveComment", "Comment")
 </div>
-}
+

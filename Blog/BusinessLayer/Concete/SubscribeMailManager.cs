@@ -13,7 +13,7 @@ namespace BusinessLayer.Concete
         Repository<SubscribeMail> reposubscribemail = new Repository<SubscribeMail>();
         public int BLAdd(SubscribeMail p)
         {
-                if(p.Mail.Length <=11 || p.Mail.Length >= 50)
+            if (p.Mail.Length <= 11 || p.Mail.Length >= 50)
             {
                 return -1;
             }

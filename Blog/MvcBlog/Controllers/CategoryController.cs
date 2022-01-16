@@ -18,7 +18,8 @@ namespace MvcBlog.Controllers
         }
         public PartialViewResult BlogDetailsCategoryList()
         {
-            return PartialView();
+            var categorycalues = cm.GetAll();
+            return PartialView(categorycalues);
         }
     }
 }

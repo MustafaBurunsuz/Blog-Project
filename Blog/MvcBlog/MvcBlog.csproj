@@ -156,6 +156,13 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="images\.net.png" />
+    <Content Include="images\apple.jpeg" />
+    <Content Include="images\fuji.jpg" />
+    <Content Include="images\godfather.jpg" />
+    <Content Include="images\person_4.jpg" />
+    <Content Include="images\person_5.jpg" />
+    <Content Include="images\sporjpg.jpg" />
     <Content Include="miniblog\about.html" />
     <Content Include="miniblog\category.html" />
     <Content Include="miniblog\contact.html" />
