@@ -94,6 +94,11 @@ namespace MvcBlog.Controllers
             ViewBag.CategoryDetails = CategoryDetails;
             return View(BlogListByCategory);
         }
+        public ActionResult AdminBlogList()
+        {
+
+            return View();
+        }
  
     }
 }

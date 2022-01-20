@@ -13,7 +13,8 @@ namespace MvcBlog.Controllers
         AboutManager abm = new AboutManager();
         public ActionResult Index()
         {
-            return View();
+            var aboutcontent = abm.GetAll();
+            return View(aboutcontent);
         }
         public PartialViewResult Footer()
         {
@@ -23,8 +24,9 @@ namespace MvcBlog.Controllers
         }
         public PartialViewResult MeetTheTeam()
         {
-
-            return PartialView();
+            AuthorManager autman = new AuthorManager();
+            var authorlist = autman.GetAll();
+            return PartialView(authorlist);
 
         }
     }
