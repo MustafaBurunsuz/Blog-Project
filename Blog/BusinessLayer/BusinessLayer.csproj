@@ -48,6 +48,7 @@
     <Compile Include="Concete\CommentManager.cs" />
     <Compile Include="Concete\ContactManager.cs" />
     <Compile Include="Concete\SubscribeMailManager.cs" />
+    <Compile Include="Concete\UserProfileManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

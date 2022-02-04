@@ -16,5 +16,30 @@ namespace BusinessLayer.Concete
 
             return repoblog.List();
         }
+        public int AddAuthorBL(Author p)
+        {
+            if(p.AuthorName== "" | p.AuthorAbout == "" |p.Title == "")
+            {
+                return -1;
+            }
+            return repoblog.Insert(p);
+        }  
+        public Author FindAuthor (int id)
+        {
+            return repoblog.Find(x => x.AuthorID == id);
+        }
+        public int UpdateAuthor(Author p)
+        {
+            Author author = repoblog.Find(x => x.AuthorID == p.AuthorID);
+            author.AboutShort = p.AboutShort ;
+            author.AuthorAbout = p.AuthorAbout;
+            author.AuthorImage = p.AuthorImage;
+            author.AuthorName = p.AuthorName;
+            author.Mail = p.Mail;
+            author.Password = p.Password;
+            author.PhoneNumber = p.PhoneNumber;
+            return repoblog.Update(author);
+            
+        }
     }
 }

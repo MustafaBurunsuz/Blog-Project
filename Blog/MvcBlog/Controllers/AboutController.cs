@@ -1,4 +1,5 @@
 ﻿using BusinessLayer.Concete;
+using EntityLayer.Concrete;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -28,6 +29,18 @@ namespace MvcBlog.Controllers
             var authorlist = autman.GetAll();
             return PartialView(authorlist);
 
+        }
+        [HttpGet]
+        public ActionResult UpdateAboutList()
+        {
+            var about = abm.GetAll();
+            return View(about);
+        }
+        [HttpPost]
+        public ActionResult UpdateAbout(About p)
+        {
+            abm.UpdateAboutBm(p);
+            return RedirectToAction("UpdateAboutList");
         }
     }
 }

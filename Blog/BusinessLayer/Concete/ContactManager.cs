@@ -20,5 +20,16 @@ namespace BusinessLayer.Concete
             }
             return repocontact.Insert(C);
         }
+        public List<Contact> GetAll()
+        {
+
+            return repocontact.List();
+        }
+        public Contact GetContactDetails(int id)
+        {
+
+            return repocontact.Find(x => x.ConatctID == id);
+        }
+
     }
 }

@@ -49,3 +49,7 @@ C:\Users\Mustafa\Documents\GitHub\MvcBlog\Blog\DataAccessLayer\obj\Debug\DataAcc
 C:\Users\Mustafa\Documents\GitHub\MvcBlog\Blog\DataAccessLayer\obj\Debug\DataAccessLayer.pdb
 C:\Users\Mustafa\Documents\GitHub\MvcBlog\Blog\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.mgr4.resources
 C:\Users\Mustafa\Documents\GitHub\MvcBlog\Blog\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.mgr41.resources
+C:\Users\Mustafa\Documents\GitHub\MvcBlog\Blog\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.mgr5.resources
+C:\Users\Mustafa\Documents\GitHub\MvcBlog\Blog\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.mig6.resources
+C:\Users\Mustafa\Documents\GitHub\MvcBlog\Blog\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.mgr7.resources
+C:\Users\Mustafa\Documents\GitHub\MvcBlog\Blog\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.mgr71.resources

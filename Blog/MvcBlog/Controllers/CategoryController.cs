@@ -21,5 +21,10 @@ namespace MvcBlog.Controllers
             var categorycalues = cm.GetAll();
             return PartialView(categorycalues);
         }
+        public ActionResult AdminCategoryList()
+        {
+            var categorylist = cm.GetAll();
+            return View(categorylist);
+        }
     }
 }
