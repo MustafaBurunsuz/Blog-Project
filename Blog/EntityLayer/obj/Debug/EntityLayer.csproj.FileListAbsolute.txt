@@ -5,7 +5,6 @@ C:\Users\MustafaBURUNSUZ\Documents\GitHub\MvcBlog\Blog\EntityLayer\bin\Debug\Ent
 C:\Users\MustafaBURUNSUZ\Documents\GitHub\MvcBlog\Blog\EntityLayer\bin\Debug\EntityFramework.SqlServer.dll
 C:\Users\MustafaBURUNSUZ\Documents\GitHub\MvcBlog\Blog\EntityLayer\bin\Debug\EntityFramework.xml
 C:\Users\MustafaBURUNSUZ\Documents\GitHub\MvcBlog\Blog\EntityLayer\bin\Debug\EntityFramework.SqlServer.xml
-C:\Users\MustafaBURUNSUZ\Documents\GitHub\MvcBlog\Blog\EntityLayer\obj\Debug\EntityLayer.csproj.AssemblyReference.cache
 C:\Users\MustafaBURUNSUZ\Documents\GitHub\MvcBlog\Blog\EntityLayer\obj\Debug\EntityLayer.csproj.CoreCompileInputs.cache
 C:\Users\MustafaBURUNSUZ\Documents\GitHub\MvcBlog\Blog\EntityLayer\obj\Debug\EntityLayer.csproj.CopyComplete
 C:\Users\MustafaBURUNSUZ\Documents\GitHub\MvcBlog\Blog\EntityLayer\obj\Debug\EntityLayer.dll
