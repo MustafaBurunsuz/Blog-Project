@@ -137,6 +137,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\AboutController.cs" />
     <Compile Include="Controllers\AuthorController.cs" />
+    <Compile Include="Controllers\ErrorController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\UserController.cs" />
     <Compile Include="Controllers\BlogController.cs" />
@@ -152,6 +153,7 @@
     <Compile Include="Models\Class1.cs" />
     <Compile Include="Models\Class2.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Roles\AdminRoleProvider.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="AdminLTE-3.0.4\.gitignore" />
@@ -2433,6 +2435,12 @@
     <Content Include="Report-Login-Free\fonts\fontawesome-webfont.woff" />
     <Content Include="Report-Login-Free\fonts\fontawesome-webfont.woff2" />
     <Content Include="Report-Login-Free\fonts\FontAwesome.otf" />
+    <Content Include="web\css\style.css" />
+    <Content Include="web\images\banner.jpg" />
+    <Content Include="web\images\banner1.jpg" />
+    <Content Include="web\images\user.png" />
+    <Content Include="web\index.html" />
+    <Content Include="web\w3layouts-license.txt" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
@@ -2504,6 +2512,10 @@
     <Content Include="Views\Login\AuthorLogin.cshtml" />
     <Content Include="Views\User\Partial1.cshtml" />
     <Content Include="Views\User\BlogList.cshtml" />
+    <Content Include="Views\User\UpdateBlog.cshtml" />
+    <Content Include="Views\User\AddNewBlog.cshtml" />
+    <Content Include="Views\Error\Page404.cshtml" />
+    <Content Include="Views\Login\AdminLogin.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

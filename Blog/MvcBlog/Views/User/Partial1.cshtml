@@ -1,11 +1,26 @@
 ﻿@model IEnumerable<EntityLayer.Concrete.Author>
 
 <div class="tab-pane" id="settings">
-    @foreach (var item in Model)
+    @using (Html.BeginForm("UpdateUserProfile", "User", FormMethod.Post))
     {
 
 
+        foreach (var item in Model)
+        {
+
+
     <form class="form-horizontal">
+        <div class="form-group row">
+
+            <label for="inputName" class="col-sm-2 col-form-label">Yazar ID</label>
+
+            <div class="col-sm-10">
+
+                <input type="text" class="form-control" name="AuthorID" value="@item.AuthorID">
+
+            </div>
+
+        </div>
 
         <div class="form-group row">
 
@@ -13,7 +28,7 @@
 
             <div class="col-sm-10">
 
-                <input type="email" class="form-control" id="inputName" value="@item.AuthorName">
+                <input type="text" class="form-control" name="AuthorName" value="@item.AuthorName">
 
             </div>
 
@@ -25,7 +40,7 @@
 
             <div class="col-sm-10">
 
-                <input type="email" class="form-control" id="inputEmail" value="@item.Mail">
+                <input type="email" class="form-control" name="Mail" value="@item.Mail">
 
             </div>
 
@@ -37,7 +52,7 @@
 
             <div class="col-sm-10">
 
-                <input type="text" class="form-control" id="inputName2" value="@item.Title">
+                <input type="text" class="form-control" name="Title" value="@item.Title">
 
             </div>
 
@@ -49,7 +64,7 @@
 
             <div class="col-sm-10">
 
-                <input type="text" class="form-control" id="inputName2" value="@item.AboutShort">
+                <input type="text" class="form-control" name="AboutShort" value="@item.AboutShort">
 
             </div>
 
@@ -61,7 +76,7 @@
 
             <div class="col-sm-10">
 
-                <input type="text" class="form-control" id="inputSkills" value="@item.PhoneNumber">
+                <input type="text" class="form-control" name="PhoneNumber" value="@item.PhoneNumber">
 
             </div>
 
@@ -72,7 +87,7 @@
 
             <div class="col-sm-10">
 
-                <input type="text" class="form-control" id="inputSkills" value="@item.AuthorImage">
+                <input type="text" class="form-control" name="AuthorImage" value="@item.AuthorImage">
 
             </div>
 
@@ -83,8 +98,8 @@
 
             <div class="col-sm-10">
 
-                <input type="text" class="form-control" id="inputSkills" value="@item.AuthorAbout">
-                
+                <input type="text" class="form-control" name="AuthorAbout" value="@item.AuthorAbout">
+
 
             </div>
 
@@ -95,7 +110,7 @@
 
             <div class="col-sm-10">
 
-                <input type="text" class="form-control" id="inputSkills" value="@item.Password">
+                <input type="text" class="form-control" name="Password" value="@item.Password">
 
             </div>
 
@@ -106,7 +121,7 @@
 
             <div class="col-sm-10">
 
-                <input type="text" class="form-control" id="inputSkills" >
+                <input type="text" class="form-control" />
 
             </div>
 
@@ -141,7 +156,7 @@
         </div>
 
     </form>
+        }
+
     }
-
-
 </div>

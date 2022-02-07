@@ -10,6 +10,7 @@ namespace MvcBlog.Controllers
 {
     public class MailSubscribeController : Controller
     {
+        [AllowAnonymous]
         [HttpGet]
         public PartialViewResult AddMail()
         {

@@ -20,5 +20,18 @@ namespace BusinessLayer.Concete
         {
             return repouserblog.List(x => x.AuthorID == id);
         }
+        public int UpdateAuthor(Author p)
+        {
+            Author author = repouser.Find(x => x.AuthorID == p.AuthorID);
+            author.AboutShort = p.AboutShort;
+            author.AuthorAbout = p.AuthorAbout;
+            author.AuthorImage = p.AuthorImage;
+            author.AuthorName = p.AuthorName;
+            author.Mail = p.Mail;
+            author.Password = p.Password;
+            author.PhoneNumber = p.PhoneNumber;
+            return repouser.Update(author);
+
+        }
     }
 }

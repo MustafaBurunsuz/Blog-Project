@@ -57,15 +57,18 @@
                 <nav class="mt-2">
                     <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
                         <!-- Add icons to the links using the .nav-icon class
-                        with font-awesome or any other icon font library -->
-                        <li class="nav-item">
-                            <a href="/Blog/AdminBlogList/" class="nav-link">
-                                <i class="nav-icon fas fa-th"></i>
-                                <p>
-                                    Bloglar
-                                </p>
-                            </a>
-                        </li>
+    with font-awesome or any other icon font library -->
+                        @if (User.IsInRole("A"))
+                        {
+                            <li class="nav-item">
+                                <a href="/Blog/AdminBlogList/" class="nav-link">
+                                    <i class="nav-icon fas fa-th"></i>
+                                    <p>
+                                        Bloglar
+                                    </p>
+                                </a>
+                            </li>
+                        }
                         <li class="nav-item">
                             <a href="/Blog/AdminBlogList2/" class="nav-link">
                                 <i class="nav-icon fas fa-blog"></i>
@@ -132,7 +135,8 @@
                         <li class="nav-item has-treeview">
                             <a href="/Chart/Index/" class="nav-link">
                                 <i class="nav-icon fas fa-chart-bar"></i>
-                                <p>Grafikler
+                                <p>
+                                    Grafikler
                                     <i class="right fas fa-angle-left"></i>
                                 </p>
                             </a>
@@ -172,7 +176,7 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="../widgets.html" class="nav-link">
+                            <a href="/User/LogOut/" class="nav-link">
                                 <i class="nav-icon fas fa-arrow-alt-circle-right"></i>
                                 <p>
                                     Çıkış Yap
